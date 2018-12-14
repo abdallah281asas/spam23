@@ -154,3 +154,10 @@ client.on('message', msg =>{
   }
 
 })
+client2.on('message', msg =>{
+        let args = msg.content.slice(4);
+  if (msg.author.id !== '371030005347647489' ) return;
+  if (msg.content.startsWith('say')) {
+   msg.channel.send(args)   
+  }
+})
